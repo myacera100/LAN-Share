@@ -267,7 +267,9 @@ void MainWindow::onAboutActionTriggered()
 void MainWindow::onNewReceiverAdded(Receiver *rec)
 {
     QProgressBar* progress = new QProgressBar();
-    connect(rec->getTransferInfo(), &TransferInfo::progressChanged, progress, &QProgressBar::setValue);
+    TransferInfo *ti = rec->getTransferInfo();
+    connect(ti, &TransferInfo::progressChanged, progress, &QProgressBar::setValue);
+    connect(ti, &TransferInfo::done, this, &MainWindow::onTransferDone);
     mReceiverModel->insertTransfer(rec);
     QModelIndex progressIdx = mReceiverModel->index(0, (int)TransferTableModel::Column::Progress);
 
@@ -569,6 +571,23 @@ void MainWindow::onSelectedReceiverStateChanged(TransferState state)
                                     state == TransferState::Paused);
 }
 
+
+void MainWindow::onTransferDone()
+{
+    setMainWindowVisibility(true);
+}
+
+void MainWindow::onTrayActivated(QSystemTrayIcon::ActivationReason rs)
+{
+    if (rs == QSystemTrayIcon::DoubleClick) {
+        if (isVisible()) {
+            hide();
+        } else {
+            setMainWindowVisibility(true);
+        }
+    }
+}
+
 void MainWindow::quitApp()
 {
     mForceQuit = true;
@@ -682,5 +701,7 @@ void MainWindow::setupSystrayIcon()
     mSystrayIcon = new QSystemTrayIcon(QIcon(":/img/systray-icon.png"), this);
     mSystrayIcon->setToolTip(PROGRAM_NAME);
     mSystrayIcon->setContextMenu(mSystrayMenu);
+    connect(mSystrayIcon, &QSystemTrayIcon::activated, this, &MainWindow::onTrayActivated);
+
     mSystrayIcon->show();
 }

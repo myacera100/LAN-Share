@@ -86,6 +86,9 @@ private Q_SLOTS:
     void onSelectedSenderStateChanged(TransferState state);
     void onSelectedReceiverStateChanged(TransferState state);
 
+    void onTransferDone();
+    void onTrayActivated(QSystemTrayIcon::ActivationReason);
+
     void quitApp();
 
 private:
