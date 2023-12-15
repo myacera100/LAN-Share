@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     app.setQuitOnLastWindowClosed(false);
 
+    QTranslator tr;
+    if (tr.load(QLocale::system(), ":/LANShare", "_")) {
+        app.installTranslator(&tr);
+    }
+
     SingleInstance si(PROGRAM_NAME);
     if (si.hasPreviousInstance()) {
         return EXIT_SUCCESS;

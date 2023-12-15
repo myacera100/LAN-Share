@@ -56,3 +56,5 @@ FORMS += ui/mainwindow.ui \
 
 RESOURCES += \
     res.qrc
+
+TRANSLATIONS = LANShare_zh.ts
