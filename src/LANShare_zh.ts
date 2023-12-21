@@ -51,16 +51,16 @@
     <message>
         <location filename="ui/mainwindow.ui" line="79"/>
         <location filename="ui/mainwindow.ui" line="246"/>
-        <location filename="ui/mainwindow.cpp" line="641"/>
-        <location filename="ui/mainwindow.cpp" line="658"/>
+        <location filename="ui/mainwindow.cpp" line="665"/>
+        <location filename="ui/mainwindow.cpp" line="682"/>
         <source>Resume</source>
         <translation>续传</translation>
     </message>
     <message>
         <location filename="ui/mainwindow.ui" line="105"/>
         <location filename="ui/mainwindow.ui" line="272"/>
-        <location filename="ui/mainwindow.cpp" line="639"/>
-        <location filename="ui/mainwindow.cpp" line="656"/>
+        <location filename="ui/mainwindow.cpp" line="663"/>
+        <location filename="ui/mainwindow.cpp" line="680"/>
         <source>Pause</source>
         <translation>暂停</translation>
     </message>
@@ -73,8 +73,8 @@
     <message>
         <location filename="ui/mainwindow.ui" line="134"/>
         <location filename="ui/mainwindow.ui" line="301"/>
-        <location filename="ui/mainwindow.cpp" line="643"/>
-        <location filename="ui/mainwindow.cpp" line="660"/>
+        <location filename="ui/mainwindow.cpp" line="667"/>
+        <location filename="ui/mainwindow.cpp" line="684"/>
         <source>Cancel</source>
         <translation>放弃</translation>
     </message>
@@ -100,87 +100,92 @@
         <translation>将中止所有正在传输的任务，确定关闭吗？</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="206"/>
+        <location filename="ui/mainwindow.cpp" line="209"/>
         <source>Select files</source>
         <translation>请选择要发送的文件</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="549"/>
+        <location filename="ui/mainwindow.cpp" line="550"/>
+        <source>Are you sure wants to delete&lt;p&gt; %1?</source>
+        <translation>确定要删除&lt;p&gt; %1？</translation>
+    </message>
+    <message>
+        <location filename="ui/mainwindow.cpp" line="551"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="587"/>
+        <location filename="ui/mainwindow.cpp" line="611"/>
         <source>Send</source>
         <translation>发送</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="604"/>
-        <location filename="ui/mainwindow.cpp" line="622"/>
+        <location filename="ui/mainwindow.cpp" line="628"/>
+        <location filename="ui/mainwindow.cpp" line="646"/>
         <source>About</source>
         <translation>了解</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="605"/>
+        <location filename="ui/mainwindow.cpp" line="629"/>
         <source>About this program</source>
         <translation>关于本软件</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="614"/>
+        <location filename="ui/mainwindow.cpp" line="638"/>
         <source>Show Main Window</source>
         <translation>显示主窗口</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="616"/>
+        <location filename="ui/mainwindow.cpp" line="640"/>
         <source>Send files...</source>
         <translation>批量发送...</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="618"/>
+        <location filename="ui/mainwindow.cpp" line="642"/>
         <source>Send folders...</source>
         <translation>直接发送文件夹...</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="620"/>
+        <location filename="ui/mainwindow.cpp" line="644"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="625"/>
+        <location filename="ui/mainwindow.cpp" line="649"/>
         <source>About Qt</source>
         <translation>了解QT</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="628"/>
+        <location filename="ui/mainwindow.cpp" line="652"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="631"/>
-        <location filename="ui/mainwindow.cpp" line="646"/>
+        <location filename="ui/mainwindow.cpp" line="655"/>
+        <location filename="ui/mainwindow.cpp" line="670"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="633"/>
-        <location filename="ui/mainwindow.cpp" line="648"/>
+        <location filename="ui/mainwindow.cpp" line="657"/>
+        <location filename="ui/mainwindow.cpp" line="672"/>
         <source>Open folder</source>
         <translation>打开文件夹</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="635"/>
-        <location filename="ui/mainwindow.cpp" line="650"/>
+        <location filename="ui/mainwindow.cpp" line="659"/>
+        <location filename="ui/mainwindow.cpp" line="674"/>
         <source>Remove</source>
         <translation>移除</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="637"/>
-        <location filename="ui/mainwindow.cpp" line="654"/>
+        <location filename="ui/mainwindow.cpp" line="661"/>
+        <location filename="ui/mainwindow.cpp" line="678"/>
         <source>Clear</source>
         <translation>清理</translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.cpp" line="652"/>
+        <location filename="ui/mainwindow.cpp" line="676"/>
         <source>Delete from disk</source>
         <translation>删除磁盘上的文件</translation>
     </message>

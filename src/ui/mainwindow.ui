@@ -174,7 +174,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableView" name="senderTableView">
+         <widget class="QTableView" name="sentContentTbView">
           <property name="contextMenuPolicy">
            <enum>Qt::CustomContextMenu</enum>
           </property>
@@ -341,7 +341,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableView" name="receiverTableView">
+         <widget class="QTableView" name="receivedContentTbView">
           <property name="contextMenuPolicy">
            <enum>Qt::CustomContextMenu</enum>
           </property>
@@ -407,7 +407,7 @@
  </resources>
  <connections>
   <connection>
-   <sender>senderTableView</sender>
+   <sender>sentContentTbView</sender>
    <signal>doubleClicked(QModelIndex)</signal>
    <receiver>MainWindow</receiver>
    <slot>onSenderTableDoubleClicked(QModelIndex)</slot>
@@ -423,7 +423,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>receiverTableView</sender>
+   <sender>receivedContentTbView</sender>
    <signal>doubleClicked(QModelIndex)</signal>
    <receiver>MainWindow</receiver>
    <slot>onReceiverTableDoubleClicked(QModelIndex)</slot>
@@ -519,7 +519,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>senderTableView</sender>
+   <sender>sentContentTbView</sender>
    <signal>customContextMenuRequested(QPoint)</signal>
    <receiver>MainWindow</receiver>
    <slot>onSenderTableContextMenuRequested(QPoint)</slot>
@@ -535,7 +535,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>receiverTableView</sender>
+   <sender>receivedContentTbView</sender>
    <signal>customContextMenuRequested(QPoint)</signal>
    <receiver>MainWindow</receiver>
    <slot>onReceiverTableContextMenuRequested(QPoint)</slot>

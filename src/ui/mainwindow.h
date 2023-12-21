@@ -52,9 +52,9 @@ private Q_SLOTS:
     void onSettingsActionTriggered();
     void onAboutActionTriggered();
 
-    void onNewReceiverAdded(Receiver* rec);
+    void onNewReceivingTaskInitiated(Receiver* rec);
 
-    void onSenderTableDoubleClicked(const QModelIndex& index);
+    void onSentItemDoubleClicked(const QModelIndex& index);
     void onSenderClearClicked();
     void onSenderCancelClicked();
     void onSenderPauseClicked();
@@ -66,22 +66,22 @@ private Q_SLOTS:
     void onReceiverPauseClicked();
     void onReceiverResumeClicked();
 
-    void onSenderTableSelectionChanged(const QItemSelection& selected,
+    void onSentItemSelectionChanged(const QItemSelection& selected,
                                        const QItemSelection& deselected);
-    void onReceiverTableSelectionChanged(const QItemSelection& selected,
+    void onReceivedItemSelectionChanged(const QItemSelection& selected,
                                          const QItemSelection& deselected);
 
-    void onSenderTableContextMenuRequested(const QPoint& pos);
-    void onReceiverTableContextMenuRequested(const QPoint& pos);
+    void onSentItemContextMenu(const QPoint& pos);
+    void onReceivedItemContextMenu(const QPoint& pos);
 
-    void openSenderFileInCurrentIndex();
-    void openSenderFolderInCurrentIndex();
-    void removeSenderItemInCurrentIndex();
+    void openSelectedSentFile();
+    void openSelectedSentFolder();
+    void removeSelectedSentItem();
 
-    void openReceiverFileInCurrentIndex();
-    void openReceiverFolderInCurrentIndex();
-    void removeReceiverItemInCurrentIndex();
-    void deleteReceiverFileInCurrentIndex();
+    void openSelectedReceivedFile();
+    void openSelectedReceivedFolder();
+    void removeSelectedReceivedItem();
+    void deleteReceivedItem();
 
     void onSelectedSenderStateChanged(TransferState state);
     void onSelectedReceiverStateChanged(TransferState state);
@@ -98,6 +98,9 @@ private:
     void connectSignals();
     void sendFile(const QString& folderName, const QString& fileName, const Device& receiver);
     void selectReceiversAndSendTheFiles(QVector<QPair<QString, QString> > dirNameAndFullPath);
+
+    void openItem(TransferTableModel *const model, const QModelIndex &curIndex, bool isDir = false);
+    void deleteItem(TransferTableModel *const model, const QModelIndex &curIndex, bool isDir = false);
 
     bool anyActiveSender();
     bool anyActiveReceiver();

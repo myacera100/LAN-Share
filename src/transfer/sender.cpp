@@ -51,7 +51,7 @@ bool Sender::start()
         mFileSize = mFile->size();
         mInfo->setDataSize(mFileSize);
         mBytesRemaining = mFileSize;
-        emit mInfo->fileOpened();
+        emit mInfo->TransferInitiated();
     }
 
     if (mFileSize > 0) {

@@ -100,7 +100,7 @@ void TransferTableModel::insertTransfer(Transfer *t)
     emit dataChanged(index(1, 0), index(mTransfers.size()-1, (int) Column::Count));
 
     TransferInfo* info = t->getTransferInfo();
-    connect(info, &TransferInfo::fileOpened, [=]() {
+    connect(info, &TransferInfo::TransferInitiated, [=]() {
         int idx = mTransfers.indexOf(info->getOwner());
         QModelIndex fNameIdx = index(idx, (int) Column::FileName);
         QModelIndex fSizeIdx = index(idx, (int) Column::FileSize);

@@ -99,7 +99,7 @@ void Receiver::processHeaderPacket(QByteArray& data)
     mFile = new QFile(dstFilePath, this);
     if (mFile->open(QIODevice::WriteOnly)) {
         mInfo->setState(TransferState::Transfering);
-        emit mInfo->fileOpened();
+        emit mInfo->TransferInitiated();
     }
     else {
         emit mInfo->errorOcurred(tr("Failed to write ") + dstFilePath);

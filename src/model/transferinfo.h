@@ -73,7 +73,7 @@ Q_SIGNALS:
     void done();
     void errorOcurred(const QString& errStr);
     void progressChanged(int progress);
-    void fileOpened();
+    void TransferInitiated();
     void stateChanged(TransferState state);
 
 private:
